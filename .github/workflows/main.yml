@@ -6,6 +6,7 @@ jobs:
     name: Test upload
     steps:
       - uses: actions/checkout@v2
+      - run: ls -lah .
       - uses: ./
         with:
           key_id: ${{ secrets.B2_KEY_ID }}
