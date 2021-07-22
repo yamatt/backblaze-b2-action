@@ -12,7 +12,7 @@ runs:
     - ${{ inputs.bucket_name }}
     - ${{ inputs.file_path }}
     - ${{ inputs.remote_path }}
-    inputs:
+inputs:
   key_id:
     required: true
     description: |
