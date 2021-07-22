@@ -6,8 +6,13 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-    name: Test b2 command
+    name: Test upload
     steps:
       - uses: actions/checkout@v2
       - uses: ./
-      - run: b2 version
+        with:
+          key_id: ${{ secrets.B2_KEY_ID }}
+          application_key: ${{ secrets.B2_APPLICATION_KEY }}
+          bucket_name: ${{ secrets.B2_BUCKET_NAME }}
+          file_path: action.yml
+          remote_path: test

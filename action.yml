@@ -1,8 +1,29 @@
-name: 'Set up Backblaze B2 CLI'
-description: 'Download and add the `b2` command to the PATH'
+name: 'Backblaze B2 Upload'
+description: 'Upload a file to Backlaze B2'
 branding:
   color: 'red'
-  icon: 'cloud'
+  icon: 'upload-cloud'
 runs:
   using: 'node12'
   main: 'index.js'
+inputs:
+  key_id:
+    required: true
+    description: |
+      Application Key ID, KeyName, KeyID
+  application_key:
+    required: true
+    description: |
+      applicationKey, secret key
+  bucket_name:
+    required: true
+    description: |
+      The name of the Backblaze B2 bucket to upload your file to.
+  file_path:
+    required: true
+    description: |
+      The path of the file to upload on your Action instance
+  remote_path:
+    required: true
+    description: |
+      The name and path of the file in the bucket
