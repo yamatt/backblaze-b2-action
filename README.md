@@ -1,9 +1,14 @@
-# B2 CLI for GitHub Actions
+# Upload a file to B2
 
-Downloads the [standalone `b2` CLI](https://www.backblaze.com/b2/docs/quick_command_line.html) into an appropriate system PATH folder so it can be used as a command.
+Pass in arguments to upload single files to Backblaze B2
 
 ```yaml
 steps:
-- uses: wilsonzlin/setup-b2@v2
-- run: b2 upload-file bucket ./local/file b2/key
+- uses: yamatt/backblaze-b2-upload-action@v1
+  with:
+    key_id: ${{ secrets.B2_KEY_ID }}
+    application_key: ${{ secrets.B2_APPLICATION_KEY }}
+    bucket_name: ${{ secrets.B2_BUCKET_NAME }}
+    file_path: action.yml
+    remote_path: test
 ```
