@@ -4,9 +4,15 @@ branding:
   color: 'red'
   icon: 'upload-cloud'
 runs:
-  using: 'node12'
-  main: 'index.js'
-inputs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.key_id }}
+    - ${{ inputs.application_key }}
+    - ${{ inputs.bucket_name }}
+    - ${{ inputs.file_path }}
+    - ${{ inputs.remote_path }}
+    inputs:
   key_id:
     required: true
     description: |
