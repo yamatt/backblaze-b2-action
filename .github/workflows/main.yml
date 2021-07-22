@@ -2,10 +2,7 @@ name: Test
 on: [push]
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: ubuntu-latest
+    runs-on: ubuntu-latest
     name: Test upload
     steps:
       - uses: actions/checkout@v2
