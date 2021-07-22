@@ -24,7 +24,7 @@ https.get(url, res => {
       } else if (ex) {
         fs.chmodSync(outPath, 0o555);
         childProcess.execFileSync(exec_path, ["authorize-account", core.getInput('key_id'), core.getInput('application_key')]);
-        childProcess.execFileSync(exec_path, [core.getInput('bucket_name'), core.getInput('file_path'), core.getInput('remote_path')]);
+        childProcess.execFileSync(exec_path, ['upload-file', core.getInput('bucket_name'), core.getInput('file_path'), core.getInput('remote_path')]);
       }
     }
   );
