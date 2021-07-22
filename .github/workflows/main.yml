@@ -6,11 +6,10 @@ jobs:
     name: Test upload
     steps:
       - uses: actions/checkout@v2
-      - run: ls -lah .
       - uses: ./
         with:
           key_id: ${{ secrets.B2_KEY_ID }}
           application_key: ${{ secrets.B2_APPLICATION_KEY }}
           bucket_name: ${{ secrets.B2_BUCKET_NAME }}
           file_path: action.yml
-          remote_path: test
+          remote_path: backblaze-b2-github-action
