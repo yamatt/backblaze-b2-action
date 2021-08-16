@@ -4,7 +4,7 @@ Pass in arguments to upload single files to Backblaze B2
 
 ```yaml
 steps:
-- uses: yamatt/backblaze-b2-upload-action@v4
+- uses: yamatt/backblaze-b2-upload-action@v6
   with:
     key_id: ${{ secrets.B2_KEY_ID }}
     application_key: ${{ secrets.B2_APPLICATION_KEY }}
