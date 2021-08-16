@@ -1,7 +1,15 @@
 name: Test
 on: push
+
 jobs:
-  test:
+  lint:
+    runs-on: ubuntu-latest
+    name: Run Hadolint
+    steps:
+      - uses: hadolint/hadolint-action@v1.5.0
+        with:
+          dockerfile: Dockerfile
+  functional:
     runs-on: ubuntu-latest
     name: Test upload
     steps:
