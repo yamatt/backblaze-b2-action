@@ -10,8 +10,8 @@ LABEL "repository"="https://github.com/yamatt/backblaze-b2-upload-action"
 LABEL "homepage"="https://github.com/yamatt/backblaze-b2-upload-action"
 LABEL "maintainer"="Matt Copperwaite <matt@copperwaite.net>"
 
-RUN apk add --update --no-cache py3-pip=20.3.4-r1
-RUN python3 -m pip install --no-cache-dir b2==2.5.0
+RUN apk add --update --no-cache py3-pip=20.3.4-r1 && \
+    python3 -m pip install --no-cache-dir b2==2.5.0
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
