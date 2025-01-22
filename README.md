@@ -1,5 +1,11 @@
 # Upload a file to B2
 
+<p align="center">
+
+![Test Workflow](https://github.com/github/docs/actions/workflows/test.yml/badge.svg)
+
+</p>
+
 Pass in arguments to upload single files to Backblaze B2.
 
 You need a [B2 account with Backblaze](https://www.backblaze.com) and [application keys](https://www.backblaze.com/docs/cloud-storage-application-keys#creating-and-using-app-keys).
