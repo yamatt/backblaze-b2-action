@@ -12,7 +12,7 @@ Add this to your workflow:
 jobs:
   upload:
     steps:
-      - uses: yamatt/backblaze-b2-upload-action@v6
+      - uses: yamatt/backblaze-b2-upload-action@v7
         with:
           key_id: ${{ secrets.B2_KEY_ID }}
           application_key: ${{ secrets.B2_APPLICATION_KEY }}
