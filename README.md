@@ -11,6 +11,8 @@ Add this to your workflow:
 ```yaml
 jobs:
   upload:
+    runs-on: ubuntu-latest
+    name: Upload file
     steps:
       - uses: yamatt/backblaze-b2-upload-action@v7
         with:
