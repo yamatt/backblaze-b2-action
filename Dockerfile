@@ -1,4 +1,4 @@
-FROM alpine:3.14.1
+FROM alpine:3.21.2
 
 # Github labels
 LABEL "com.github.actions.name"="Backblaze B2 Upload Action"
