@@ -1,11 +1,11 @@
-name: 'Backblaze B2 Upload'
-description: 'Upload a file to Backlaze B2'
+name: "Backblaze B2 Upload"
+description: "Upload a file to Backlaze B2"
 branding:
-  color: 'red'
-  icon: 'upload-cloud'
+  color: "red"
+  icon: "upload-cloud"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.key_id }}
     - ${{ inputs.application_key }}
